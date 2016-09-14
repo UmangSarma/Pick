@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Pick the Hen</title>
+        <link rel="stylesheet" href="normalize.css">
+   
+        <link rel="stylesheet" href="style.css">
+		<script>
+
+var c=0;
+var i=0;
+var a=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+var b=["Yadav Nitesh Ramprasad","Prasanth. R","Payasam Ravi Teja ","Amal Varghese","Vemula Jaya Chandra","L Mercy Caroline","ASHIK D LIJO","BERLIN VARGHESE","SAVARI NIVIN J","PON RAJESH M","PAUL ISAAC SHELTON J","JOSHUA MELVYN R","SURYA GOWTHAM S","JIPI ANN GEORGE","JORVEKAR TEJAS RAVINDRA","UMANG SHARMA","ERLIN ANGELA W","JERRIN JOY","SHIVANI J","G LEEMA SHERLYN","JOHN DHINAKAR S","R SAM JASPER","PENTAREDDY IGNATIUS ROHITH REDDY","MARIA JOHN CROSSINGTON A","PATHURI KUMAR SAI MANOJ","DANIEL R","R SAMUEL","UTKARSH SIDDHARTH","P RICHARD BARNABAS","JOSEPH JONES S W","ISAAC PAMINI S","CLEMENT MERWIN JOSHUA P","JOSE MERCY ANITHA S","KASUKURTHI GIDHYON SOLOMON RAJU","ALLWIN JAYAKUMAR S","SHALOM S","CIBIL M","SWEETY LOBO E","S PRATHEEPA","JENITTA J","SHEEBA ELIZABETH JOHN","SAGAYA ALEX M","SHERYLENE NEETHI M","GABRI MAGDALENE R","VAISHNA K V","ROBIN WILLIAM J","MANJULA. N","ABISHEK SAM JOSHUA P","THOMAS CHENNANKARA","REUBEN JOHN ISAAC","GADADASU PRAFFUL THEJA","DHANUSH R","ABIL MONCY M","ABINAYA T","PUDOTA BALA THOMAS AJITH","VOOLA VAMSIJOSEPH","S SUBODH","A BRIGHTLIN RAJA","JAMES RICHARD A","PRANAV SAKE MUKKUPOGU","MALIREDDY SRINADH REDDY","SOWMYA KRISTAM","ARVIND RAJA S","ELAPROLU SANJAY SHARAN","BASANI ROHITH","JEEVITHA E","NIVETHA P","SRINIVASAN S","JEDIDIAH JEYARAJ","MERUGU AJAY BABU"];
+var j=0;
+var k=0;
+var count=0;
+function myFunction(name) {
+
+  var x = Math.floor((Math.random() * 71) + 1);
+
+  
+	 for(i=0;i<k;i++){
+	 count=count+1;
+	 if(x==a[i])
+	 {
+	 c=100;
+	 
+	 }
+	 }
+	    
+     if(c==0){
+	 a[k]=x;
+	 	  k=k+1;
+	 if(name=='first'){ 
+	 document.getElementById("demo").innerHTML = b[x-1];
+	 }
+	 
+	  if(name=='bysecond'){
+	   a[k]=x;
+	 	  k=k+1;
+		  var t=" ";
+		  t=t+"and "+b[x-1];
+	  document.getElementById("seconddemo").innerHTML = t;
+	  }}
+	  
+	 if(k==71)
+	 {
+	 k=0;}
+	 
+	 else{
+	c=0;
+	 myFunction();
+	 
+	 }
+          
+        
+     
+}
+
+</script>
+
+</head>
+
+<body>
+
+    <header>
+<nav id="nav" class="ry">
+  <ul id="main-menu">
+    <li>
+      <a href="welcome.html"><i class="fa fa-home"></i> Home</a>
+    </li>
+    <li>
+      <a href="#"><i class="fa fa-user"></i> Pick student <i class="fa fa-caret-down"></i></a>
+        <ul class="submenu">
+        <li><a href="pick1.html"> Pick One Student Randomly</a></li>
+        <li><a href="pich2.html">Pick two student Randomly</a></li>
+        <li>
+          <a href="#">Pick Student by Name or Register Number <i class="fa fa-caret-right"></i></a>
+           <ul class="submenu">
+            <li><a href="#">coming soon</a></li>
+            <li>
+              <a href="#">Coming soon</a>
+             </li>
+            
+          </ul>  
+         </li>
+      </ul>  
+    </li>
+    <li>
+      <a href="#"><i class="fa fa-briefcase"></i>Create Group in Class<i class="fa fa-caret-down"></i></a>
+       <ul class="submenu">
+        <li><a href="make2group.html">2 Groups</a></li>
+        <li><a href="make3group.html">3 Groups</a></li>
+        <li><a href="make4group.html">4 Groups</a></li>
+        <li><a href="make5.html">5 Groups</a></li>
+        
+      </ul>  
+    </li>
+    <li>
+      <a href="#"><i class="fa fa-comment"></i> Contact Us</a>
+    </li>
+  </ul>
+</nav>  
+</header>
+
+<main id="main">
+  
+  <div class="menu-chks">
+    
+    <h3>Pick first Student:</h3>
+    
+     <label for="rt"><input name="efx" id="rt" type="radio" value="rt" onclick="myFunction('first')"> <span>First Student</span></label>
+    
+    
+  
+    
+    <h3>Pick Second Student:</h3>
+    
+  
+    
+    <label for="es"><input name="ease" id="es" type="radio" value="es" onclick="myFunction('bysecond')"> <span>Second Student</span></label>
+	
+
+    
+    
+  </div>
+  
+  <div class="efx-info">
+  <h1>Hurry Up !!!</h1>
+    <h1 id="demo"></h1> 
+    <h1 id="seconddemo"> </h1>
+  </div>
+  
+</main>
+
+<footer>
+  
+</footer>
+   
+
+    
+    
+    
+  </body>
+</html>
